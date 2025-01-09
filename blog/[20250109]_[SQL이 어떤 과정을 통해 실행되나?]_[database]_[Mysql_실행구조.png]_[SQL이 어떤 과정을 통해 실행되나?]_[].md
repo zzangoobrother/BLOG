@@ -1,6 +1,6 @@
 # SQL이 어떤 과정을 통해 실행되나?
 
-![Mysql_실행구조.png](..%2Fimg%2FMysql_%EC%8B%A4%ED%96%89%EA%B5%AC%EC%A1%B0.png)
+![Mysql_실행구조.png](img/Mysql_실행구조.png)
 
 ## 쿼리 실행 구조
 
