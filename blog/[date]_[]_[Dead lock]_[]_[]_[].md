@@ -6,4 +6,4 @@ JPA GenerationType.AUTO Dead lock이 발생하는 경우인데 가지고 있는 
 
 왜 Dead lock이 발생하는지 들어가 보자.
 
-
+test
