@@ -68,3 +68,25 @@ insert into member (age,name,id) values (?,?,?)
 
 ### 실행 코드
 
+#### SimpleJpaRepository
+![스크린샷 2025-01-13 오후 9.04.51.png](img/스크린샷 2025-01-13 오후 9.04.51.png)
+
+#### AbstractSaveEventListener.saveWithGeneratedId
+![스크린샷 2025-01-13 오후 9.10.58.png](img/스크린샷 2025-01-13 오후 9.10.58.png)
+
+#### SequenceStyleGenerator.generate
+![스크린샷 2025-01-13 오후 9.13.39.png](img/스크린샷 2025-01-13 오후 9.13.39.png)
+
+#### TableStructure.buildCallback
+![스크린샷 2025-01-13 오후 9.15.59.png](img/스크린샷 2025-01-13 오후 9.15.59.png)
+
+#### JdbcIsolationDelegate.delegateWork
+![스크린샷 2025-01-13 오후 9.17.12.png](img/스크린샷 2025-01-13 오후 9.17.12.png)
+
+ID 채번을 위해
+`Connection connection = this.jdbcConnectionAccess().obtainConnection();`
+코드가 실행 되며 2번째 Connection을 가지고 옵니다.
+
+ID를 조회하고, update 하는 Transaction이 commit되면 Connection이 바로 Pool에 반납 됩니다.
+
+
