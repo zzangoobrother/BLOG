@@ -89,4 +89,4 @@ ID 채번을 위해
 
 ID를 조회하고, update 하는 Transaction이 commit되면 Connection이 바로 Pool에 반납 됩니다.
 
-
+지금까지 코드를 보면서 원인을 찾았습니다. 서버에서 어떤 상황들이 발생하는지 다음 편에서 알아보자!
