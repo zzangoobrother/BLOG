@@ -1,4 +1,4 @@
-# JPA GenerationType.AUTO Dead lock 발생
+# JPA GenerationType.AUTO Dead lock 발생 1
 
 'DB Connection 갯수가 많다고 무조건 좋은건 아니다.' 라는 주제를 가지고 공부 중 재밌는 내용을 봤다.
 
