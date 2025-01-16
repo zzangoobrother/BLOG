@@ -43,7 +43,7 @@ spring:
 HikariCP Connection을 1개로 하고 테스트를 해보자.
 결과는 아래 이미지와 같다.
 
-![스크린샷 2025-01-12 오후 4.35.42.png](img/스크린샷 2025-01-12 오후 4.35.42.png)
+![dead_lock_test.png](img/dead_lock_test.png)
 
 결과는 500 Internal Server Error 이고, DB Connection 기본 connection-timeout이 30초 때문에 30초 이상의 실행 결과가 나왔다.
 
@@ -69,19 +69,19 @@ insert into member (age,name,id) values (?,?,?)
 ### 실행 코드
 
 #### SimpleJpaRepository
-![스크린샷 2025-01-13 오후 9.04.51.png](img/스크린샷 2025-01-13 오후 9.04.51.png)
+![connection_code_1.png](img/connection_code_1.png)
 
 #### AbstractSaveEventListener.saveWithGeneratedId
-![스크린샷 2025-01-13 오후 9.10.58.png](img/스크린샷 2025-01-13 오후 9.10.58.png)
+![connection_code_2.png](img/connection_code_2.png)
 
 #### SequenceStyleGenerator.generate
-![스크린샷 2025-01-13 오후 9.13.39.png](img/스크린샷 2025-01-13 오후 9.13.39.png)
+![connection_code_3.png](img/connection_code_3.png)
 
 #### TableStructure.buildCallback
-![스크린샷 2025-01-13 오후 9.15.59.png](img/스크린샷 2025-01-13 오후 9.15.59.png)
+![connection_code_4.png](img/connection_code_4.png)
 
 #### JdbcIsolationDelegate.delegateWork
-![스크린샷 2025-01-13 오후 9.17.12.png](img/스크린샷 2025-01-13 오후 9.17.12.png)
+![connection_code_5.png](img/connection_code_5.png)
 
 ID 채번을 위해
 `Connection connection = this.jdbcConnectionAccess().obtainConnection();`
