@@ -53,3 +53,18 @@ DB 검색을 위해서는 해시 테이블이 적합하지 않습니다.`
 
 #### B+Tree
 ![B+Tree.png](img/B+Tree.png)
+- DB index를 위해 자식 노드가 2개 이상인 B-Tree를 개선시킨 자료구조 입니다. B+Tree는 모든 노드에 데이터를 저장했던 B-Tree와 다른 특성을 가집니다.
+- 리프노드만 index와 함께 데이터(Value)를 가지고 있고, 나머지 노드들은 데이터를 위한 index(Key)만을 갖습니다.
+- 리프노드들은 LinkedList로 연결되어 있습니다.
+- 데이터 노드 크기는 index 노드의 크기와 같지 않아도 됩니다.
+
+데이터베이스의 index 컬럼은 부등호를 이용한 순차 검색 연산이 자주 발생합니다. 이 때문에 B-Tree의 리프노드들을 LinkedList로 연결하여 순차검색을 용이하게 하는 등 B-Tree를 인덱스에 맞게 최적화 하였습니다.
+
+물론 리프노드까지 가지 않아도 탐색할 수 있는 B-Tree에 비해 무조건 리프노드까지 가야한다는 단점도 있습니다.
+
+이러한 이유로 B+Tree는 O(𝑙𝑜𝑔2𝑛) 시간 복잡도를 가지지만 해시 테이블보다 index에 더욱 적합한 자료구조 입니다.
+
+#### InnoDB B+Tree 구조
+![mysql_innoDB_index.png](img/mysql_innoDB_index.png)
+
+InnoDB의 B+Tree는 일반적인 구조보다 더욱 복잡하게 구현이 되어있습니다. InnoDB에서 같은 레벨의 노드들끼리는 LinkedList가 아닌 DoubleLinkedList로 연결되어있으며, 자식 노드들은 SingleLinkedList로 연결되어 있습니다.
