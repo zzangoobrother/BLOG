@@ -156,6 +156,7 @@ public class FcmTestController {
 ![fcm_debug_9.png](img/fcm_debug_9.png)
 
 결론부터 말하자면 `Executors.newCachedThreadPool(threadFactory);`를 사용하는데, 요청이 100개면 100의 쓰레드가, 1000개면 1000개의 쓰레드가 생성되고, 사용한 후 일정 시간이 지나도록 사용되지 않으면 소멸된다.
+왜 `newCachedThreadPool()`를 사용했는지 유추해보자면 순식간에 FCM 알림을 전송한다는 전략으로 한거라 생각된다. 하지만 쓰레드 생성과 소멸은 많은 비용이 발생한다.
 
 firebase에서는 이 문제를 알고 있었고, 가이드 또한 주었다. <a href='https://firebase.google.com/docs/reference/admin/java/reference/com/google/firebase/ThreadManager' target='_blank' >가이드</a> 이 부분을 개선하자.
 
@@ -181,6 +182,7 @@ public class CustomThreadManager extends ThreadManager {
 ```
 
 `newCachedThreadPool` 대신 `newFixedThreadPool` 을 사용한 이유는 `maxThread`를 설정하여 무한정 쓰레드 생성을 막을 수 있기 때문이다.
+그리고 쓰레드의 개수는 사용자와 서버의 사양에 따라 설정하면 된다.
 
 이제 만들었으니 적용해보자. 기존 firebase 설정 코드에 `setThreadManager()` 을 추가하기만 하면된다.
 
