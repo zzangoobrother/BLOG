@@ -55,7 +55,7 @@ public class FcmClient {
         List<MulticastMessage> multicastMessages = tokenPartition.stream()
                 .map(it -> createMulticastMessage(it, fcmMulticastMessage.notification().title(), fcmMulticastMessage.notification().body(), fcmMulticastMessage.notification().image(), fcmMulticastMessage.options()))
                 .toList();
-
+        
         multicastMessages.forEach(it -> FirebaseMessaging.getInstance(firebaseApp).sendEachForMulticastAsync(it));
     }
 

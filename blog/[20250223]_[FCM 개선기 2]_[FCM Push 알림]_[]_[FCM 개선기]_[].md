@@ -114,7 +114,7 @@ public class AsyncMultiProcessor {
         if (Objects.isNull(message)) {
             return;
         }
-
+        
         int selectedQueue = ThreadLocalRandom.current().nextInt(queueCount);
         flatterExecutors.get(selectedQueue).execute(() -> queues.get(selectedQueue).add(message));
     }
@@ -171,7 +171,7 @@ public class SendService {
                 messageDevice.completed();
                 continue;
             }
-
+            
             MessagingErrorCode messagingErrorCode = sendResponse.getException().getMessagingErrorCode();
 
             // 재시도 처리
