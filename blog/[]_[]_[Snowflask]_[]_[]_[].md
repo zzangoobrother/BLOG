@@ -40,4 +40,18 @@ UUID는 중복될 가능성이 매우 낮습니다. 동일한 UUID가 생성될 
 - 시간순으로 정렬할 수 없다.
 
 ### Ticket server
+auto_increment 기능을 가진 DBMS를 Ticket server를 중앙 집중형으로 하나만 사용하는 것이다.
+
+![snowflake_ticket_server.png](img/snowflake_ticket_server.png)
+
+#### 장점
+- 유일성이 보장되는 오직 숫자로만 구성된 ID를 쉽게 생성한다.
+- 구현하기 쉽고, 중소 규모에 적합하다.
+#### 단점
+- Ticket server가 SPOF가 된다. 이를 피하기 위해 Ticket server를 여러 대 준비하면 데이터 동기화 같은 새로운 문제가 발생한다.
+
+#### Nano ID
+비교적 최근에 개발된 랜덤 기반 ID 라이브러리, UUID의 크기가 너무 커서 줄여주는 목적으로 사용한다.
+
+UUID와 차이점
 
