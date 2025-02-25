@@ -15,4 +15,29 @@
 
 그렇다면 장점을 수용하고, 단점을 극복하는 ID 생성은 어떻게 할 수 있을까?
 
+### 분산 시스템 ID 생성 방법
+
+분산 시슽ㅁ에서 유일성이 보장되는 ID를 만드는 방법은 여러 가지가 있다.
+
+- <a href='https://en.wikipedia.org/wiki/Universally_unique_identifier' target='_blank' >UUID</a>
+- <a href='https://github.com/ai/nanoid' target='_blank' >Nano ID</a>
+- <a href='https://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/' target='_blank' >Ticket server</a>
+- <a href='https://github.com/twitter-archive/snowflake/tree/snowflake-2010' target='_blank' >Snowflake ID</a>
+
+### UUID
+UUID는 유일성이 보장되는 128비트의 16진수로 이루어진 숫자이다. 분산 컴퓨팅 환경에서 고유 식별자뿐만 아니라, 트랜잭션 ID, URI 등 고유한 값을 생성할 때 자주 사용됩니다.  
+UUID는 중복될 가능성이 매우 낮습니다. 동일한 UUID가 생성될 확률을 50%로 끌어올리기 위해서는 초당 10억 개의 UUID를 100년 동안 계속해서 만들어야 합니다.
+
+![snowflake_uuid.png](img/snowflake_uuid.png)
+
+#### 장점
+- 분산 시스템, 멀티 인스턴스 등 다양한 환경에서 유일한 ID로 활용 가능하다.
+- UUID를 만드는 것은 단순하다. 그래서 쉽게 사용 가능하다.
+
+#### 단점
+- 128비트 이므로 크기가 크며, 데이터베이스 인덱스로 활용 시 공간 효율성이 좋지 않다.
+- 읽고 이해하기 힘들다.
+- 시간순으로 정렬할 수 없다.
+
+### Ticket server
 
