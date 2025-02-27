@@ -20,8 +20,8 @@
 분산 시슽ㅁ에서 유일성이 보장되는 ID를 만드는 방법은 여러 가지가 있다.
 
 - <a href='https://en.wikipedia.org/wiki/Universally_unique_identifier' target='_blank' >UUID</a>
-- <a href='https://github.com/ai/nanoid' target='_blank' >Nano ID</a>
 - <a href='https://code.flickr.net/2010/02/08/ticket-servers-distributed-unique-primary-keys-on-the-cheap/' target='_blank' >Ticket server</a>
+- <a href='https://github.com/ai/nanoid' target='_blank' >Nano ID</a>
 - <a href='https://github.com/twitter-archive/snowflake/tree/snowflake-2010' target='_blank' >Snowflake ID</a>
 
 ### UUID
@@ -54,4 +54,9 @@ auto_increment 기능을 가진 DBMS를 Ticket server를 중앙 집중형으로 
 비교적 최근에 개발된 랜덤 기반 ID 라이브러리, UUID의 크기가 너무 커서 줄여주는 목적으로 사용한다.
 
 UUID와 차이점
+- 알파벳 대문자도 활용한다.
+- 기본 21바이트이다, 가변 길이이다.
 
+Maven, Gradle을 통해 추가해서 사용할 수 있습니다. <a href='https://github.com/aventrix/jnanoid' target='_blank' >링크</a>를 보면 SecureRandom을 사용해서 안전한 랜덤값 기반으로 ID를 생성할 수 있습니다.
+
+### Snowflake ID
