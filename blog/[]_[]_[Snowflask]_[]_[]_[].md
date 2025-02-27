@@ -60,3 +60,25 @@ UUID와 차이점
 Maven, Gradle을 통해 추가해서 사용할 수 있습니다. <a href='https://github.com/aventrix/jnanoid' target='_blank' >링크</a>를 보면 SecureRandom을 사용해서 안전한 랜덤값 기반으로 ID를 생성할 수 있습니다.
 
 ### Snowflake ID
+유일성이 보장되는 64bit의 10진수로 이루어진 숫자이다. 트위터(X)에서 많은 양의 데이터가 매일 생산되고 소비된다.  
+매우 많은 트래픽을 처리하기 위해 분산 환경에서 서비스가 진행되는데, 각 데이터의 고유한 ID를 생성하기 위해 Snowflake ID 기법을 고안했다.
+
+![snowflake_snowflakeId.png](img/snowflake_snowflakeId.png)
+
+최 4개의 부분으로 구성되어 있다.
+
+- sign(1bit) : 음수와 양수를 구별하는데 사용한다.
+- timestamp(41bit) : 기원 시각(epoch) 이후로 몇 밀리초가 경과했는지 나타내는 값
+- worker_id(10bit) : 데이터 센터 ID 5bit + 서버 ID 5bit, 데이터 센터 max 32개 * 서버 max 32대 => 1024대 까지 가능
+- sequence(12bit) : ID를 생성할 때마다 1만큼 증가시키는 값이며, 1밀리 초가 경과할 때마다 0으로 초기화 된다.
+
+#### 장점
+- 64bit 크기로, GUID 표준에 비해 작은 크기를 가지고 있다.
+- timestamp 기반으로 생성되기 때문에 정렬이 가능하다.
+
+#### 단점
+- timestamp 기반으로 생성되기 때문에 OS별, 인스턴스별 시간 차이가 발생할 수 있다.
+- UUID에 비해 복잡하다.
+- 중앙 집중 ID 채번 방식을 사용한다면 네트워크 통신이 필요, 관리 포인트가 늘어난다.
+
+### 코드 작성
