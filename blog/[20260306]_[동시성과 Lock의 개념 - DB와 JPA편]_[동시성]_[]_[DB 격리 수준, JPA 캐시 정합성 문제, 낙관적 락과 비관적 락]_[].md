@@ -209,7 +209,97 @@ public void likeAndCheck(Long productId) {
 
 Native Query는 JPA를 우회하여 DB에 직접 SQL을 실행한다. 1차 캐시는 이 변경을 모른다. 그래서 `@Modifying(clearAutomatically = true)`를 설정하여 **Native Query 실행 후 1차 캐시를 비우도록** 명시하는 것이다.
 
-`clearAutomatically = true`는 영속성 컨텍스트를 clear하므로, 이후 조회 시 DB에서 최신 데이터를 다시 읽어온다. 다만 clear 이전에 flush되지 않은 변경사항이 있다면 유실될 수 있으므로, `flushAutomatically = true`도 함께 고려해야 한다.
+#### clearAutomatically vs flushAutomatically
+
+`@Modifying`에는 두 가지 옵션이 있다. 이름이 비슷해서 혼동하기 쉽지만, 역할이 완전히 다르다.
+
+```java
+@Modifying(clearAutomatically = true, flushAutomatically = true)
+```
+
+**`clearAutomatically = true`** — 쿼리 실행 **후** 영속성 컨텍스트를 clear한다.
+
+```java
+@Transactional
+public void clearExample(Long productId) {
+    // 1. 상품 조회 → 1차 캐시에 저장 (likes = 10)
+    Product product = productRepository.findById(productId);
+
+    // 2. Native Query 실행 (likes = 11)
+    // clearAutomatically = true이므로, 실행 후 1차 캐시가 비워진다
+    productRepository.incrementLikeCount(productId);
+
+    // 3. 캐시가 비워졌으므로 DB에서 다시 조회 (likes = 11)
+    Product fresh = productRepository.findById(productId);
+    // fresh.getLikes() → 11 (최신값!)
+}
+```
+
+핵심은 **"실행 후(after)"**다. Native Query가 끝나면 1차 캐시를 통째로 비운다. 이후 조회 시 DB에서 최신 데이터를 가져오므로 stale 데이터 문제가 해결된다.
+
+**`flushAutomatically = true`** — 쿼리 실행 **전** 영속성 컨텍스트를 flush한다.
+
+```java
+@Transactional
+public void flushExample(Long productId) {
+    // 1. 상품 조회 → 1차 캐시에 저장
+    Product product = productRepository.findById(productId);
+
+    // 2. 엔티티의 이름을 변경 (아직 DB에 반영 안 됨, 1차 캐시에만 존재)
+    product.update("새로운 상품명", ...);
+
+    // 3. Native Query 실행
+    // flushAutomatically = true이므로, 실행 전에 2번의 변경이 DB에 flush된다
+    // flushAutomatically = false라면? 2번의 변경이 DB에 반영되지 않은 채 Native Query가 실행된다
+    productRepository.incrementLikeCount(productId);
+}
+```
+
+핵심은 **"실행 전(before)"**이다. Native Query가 실행되기 전에, 영속성 컨텍스트에 쌓여 있던 변경사항(Dirty 엔티티)을 먼저 DB에 반영한다.
+
+#### 왜 둘 다 필요한가?
+
+`clearAutomatically`만 쓰면, clear 전에 flush되지 않은 변경사항이 유실될 수 있다.
+
+```java
+@Transactional
+public void dangerousExample(Long productId) {
+    Product product = productRepository.findById(productId);
+
+    // 이름 변경 (1차 캐시에만 반영, DB에는 아직 안 감)
+    product.update("새로운 상품명", ...);
+
+    // clearAutomatically = true, flushAutomatically = false일 때:
+    // → flush 없이 바로 Native Query 실행
+    // → Native Query 실행 후 1차 캐시 clear
+    // → "새로운 상품명" 변경이 flush도 안 되었는데 캐시에서 사라짐!
+    // → 트랜잭션 커밋 시 Dirty Checking 대상이 없으므로 UPDATE도 안 나감
+    // → "새로운 상품명" 변경 유실!
+    productRepository.incrementLikeCount(productId);
+}
+```
+
+`flushAutomatically = true`를 함께 쓰면 이 문제가 해결된다.
+
+```java
+// 안전한 조합
+@Modifying(clearAutomatically = true, flushAutomatically = true)
+@Query("UPDATE products SET likes = likes + 1 WHERE id = :productId", nativeQuery = true)
+fun incrementLikeCount(productId: Long)
+```
+
+1. `flushAutomatically = true` → Native Query 실행 **전** 변경사항을 DB에 flush
+2. Native Query 실행
+3. `clearAutomatically = true` → Native Query 실행 **후** 1차 캐시 clear
+
+정리하면 다음과 같다.
+
+| 옵션 | 시점 | 역할 | 없으면? |
+|------|------|------|---------|
+| `flushAutomatically` | 쿼리 실행 **전** | 쌓인 변경사항을 DB에 반영 | 미반영 변경사항이 유실될 수 있음 |
+| `clearAutomatically` | 쿼리 실행 **후** | 1차 캐시를 비워 stale 방지 | 이후 조회 시 stale 데이터 반환 |
+
+> 실무에서는 `clearAutomatically = true`만 써도 대부분 문제없다. Native Query 전에 같은 엔티티를 수정하는 패턴 자체가 드물기 때문이다. 하지만 "혹시 모를 유실"을 방지하려면 `flushAutomatically = true`를 함께 쓰는 것이 안전하다.
 
 ---
 
