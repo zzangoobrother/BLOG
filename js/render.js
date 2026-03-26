@@ -661,7 +661,7 @@ async function initialize() {
     } else if (url.search.split("=")[0] === "?post") {
       document.getElementById("contents").style.display = "block";
       document.getElementById("blog-posts").style.display = "none";
-      postNameDecode = decodeURI(url.search.split("=")[1]).replaceAll("+", " ");
+      postNameDecode = decodeURIComponent(url.search.split("=")[1]).replaceAll("+", " ");
       // console.log(postNameDecode);
       postInfo = extractFileInfo(postNameDecode);
       try {
