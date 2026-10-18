@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 770 470" width="100%" role="img" aria-label="Paxos 정상 흐름: 1단계 준비, 2단계 수락, 값 A 결정" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#4b5563"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <style>
+      .h1 { paint-order: stroke; stroke: #f3f4f6; stroke-width: 9; stroke-linejoin: round; }
+      .h2 { paint-order: stroke; stroke: #eef4fd; stroke-width: 9; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="770" height="470" fill="#ffffff"/>
+
+  <!-- 단계 배경 띠 -->
+  <rect x="10" y="88" width="750" height="140" rx="10" fill="#f3f4f6"/>
+  <rect x="10" y="240" width="750" height="140" rx="10" fill="#eef4fd"/>
+
+  <!-- 단계 이름 -->
+  <text x="22" y="140" font-size="15" font-weight="700" fill="#1f2328">1단계: 준비</text>
+  <text x="22" y="162" font-size="12" fill="#4b5563">(Prepare → Promise)</text>
+  <text x="22" y="292" font-size="15" font-weight="700" fill="#1f2328">2단계: 수락</text>
+  <text x="22" y="314" font-size="12" fill="#4b5563">(Accept → Accepted)</text>
+
+  <!-- 생명선 -->
+  <g stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="175" y1="70" x2="175" y2="398"/>
+    <line x1="285" y1="70" x2="285" y2="398"/>
+    <line x1="365" y1="70" x2="365" y2="398"/>
+    <line x1="445" y1="70" x2="445" y2="398"/>
+    <line x1="525" y1="70" x2="525" y2="398"/>
+    <line x1="605" y1="70" x2="605" y2="398"/>
+    <line x1="710" y1="70" x2="710" y2="398"/>
+  </g>
+
+  <!-- 머리글 -->
+  <text x="445" y="17" font-size="13" fill="#4b5563" text-anchor="middle">수락자 (Acceptor)</text>
+  <line x1="255" y1="25" x2="635" y2="25" stroke="#9ca3af" stroke-width="1.5"/>
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#1f2328" stroke-width="1.5">
+    <rect x="135" y="36" width="80" height="34" rx="8" fill="#ffffff" stroke="#2f6fdb"/>
+    <text x="175" y="58">제안자 P</text>
+    <rect x="263" y="36" width="44" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="285" y="58">S1</text>
+    <rect x="343" y="36" width="44" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="365" y="58">S2</text>
+    <rect x="423" y="36" width="44" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="445" y="58">S3</text>
+    <rect x="503" y="36" width="44" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="525" y="58">S4</text>
+    <rect x="583" y="36" width="44" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="605" y="58">S5</text>
+    <rect x="665" y="36" width="90" height="34" rx="8" fill="#ffffff" stroke="#6b7280"/>
+    <text x="710" y="58">학습자</text>
+  </g>
+
+  <!-- 1단계: Prepare (P -> S1~S5) -->
+  <line x1="175" y1="135" x2="605" y2="135" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ag)"/>
+  <g fill="#4b5563"><circle cx="285" cy="135" r="4"/><circle cx="365" cy="135" r="4"/><circle cx="445" cy="135" r="4"/><circle cx="525" cy="135" r="4"/></g>
+  <text class="h1" x="395" y="124" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">Prepare(1) → 다섯 대 모두</text>
+
+  <!-- 1단계: Promise (S1~S5 -> P) -->
+  <line x1="605" y1="195" x2="175" y2="195" stroke="#4b5563" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#ag)"/>
+  <g fill="#4b5563"><circle cx="285" cy="195" r="4"/><circle cx="365" cy="195" r="4"/><circle cx="445" cy="195" r="4"/><circle cx="525" cy="195" r="4"/></g>
+  <text class="h1" x="395" y="184" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">Promise ×5 (과반인 3대면 충분)</text>
+
+  <!-- 2단계: Accept (P -> S1~S5) -->
+  <line x1="175" y1="287" x2="605" y2="287" stroke="#2f6fdb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <g fill="#2f6fdb"><circle cx="285" cy="287" r="4"/><circle cx="365" cy="287" r="4"/><circle cx="445" cy="287" r="4"/><circle cx="525" cy="287" r="4"/></g>
+  <text class="h2" x="395" y="276" font-size="14" font-weight="700" fill="#2f6fdb" text-anchor="middle">Accept(1, A) → 다섯 대 모두</text>
+
+  <!-- 2단계: Accepted (S1~S5 -> 학습자) -->
+  <line x1="285" y1="347" x2="710" y2="347" stroke="#2f6fdb" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#ab)"/>
+  <g fill="#2f6fdb"><circle cx="285" cy="347" r="4"/><circle cx="365" cy="347" r="4"/><circle cx="445" cy="347" r="4"/><circle cx="525" cy="347" r="4"/><circle cx="605" cy="347" r="4"/></g>
+  <text class="h2" x="480" y="336" font-size="14" font-weight="700" fill="#2f6fdb" text-anchor="middle">Accepted ×5 → 학습자들에게 알림</text>
+
+  <!-- 결론 -->
+  <rect x="150" y="408" width="470" height="44" rx="10" fill="#2f6fdb"/>
+  <text x="385" y="436" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">과반이 수락 → 값 A 결정</text>
+</svg>

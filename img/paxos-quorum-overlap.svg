@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="서버 5대 중 과반 두 개는 S3에서 반드시 겹친다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <rect width="720" height="300" fill="#ffffff"/>
+
+  <!-- 과반 영역 (반투명) -->
+  <rect x="40" y="100" width="380" height="110" rx="22" fill="#2f6fdb" fill-opacity="0.16" stroke="#2f6fdb" stroke-width="2"/>
+  <rect x="300" y="100" width="380" height="110" rx="22" fill="#2f9e6f" fill-opacity="0.16" stroke="#2f9e6f" stroke-width="2"/>
+
+  <!-- 영역 라벨 -->
+  <text x="48" y="86" font-size="15" font-weight="700" fill="#2f6fdb">과반 {S1, S2, S3}</text>
+  <text x="672" y="236" font-size="15" font-weight="700" fill="#23805a" text-anchor="end">과반 {S3, S4, S5}</text>
+
+  <!-- 서버 -->
+  <g font-size="16" font-weight="700" text-anchor="middle" fill="#1f2328">
+    <rect x="70" y="125" width="60" height="60" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="100" y="161">S1</text>
+    <rect x="200" y="125" width="60" height="60" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="230" y="161">S2</text>
+    <rect x="330" y="125" width="60" height="60" rx="10" fill="#ffffff" stroke="#1f2328" stroke-width="3.5"/>
+    <text x="360" y="161">S3</text>
+    <rect x="460" y="125" width="60" height="60" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="490" y="161">S4</text>
+    <rect x="590" y="125" width="60" height="60" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+    <text x="620" y="161">S5</text>
+  </g>
+
+  <!-- 겹침 표시 -->
+  <text x="360" y="236" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">겹치는 서버</text>
+
+  <!-- 캡션 -->
+  <text x="360" y="280" font-size="15" fill="#1f2328" text-anchor="middle">어떤 과반 두 개를 골라도 최소 한 대는 겹친다</text>
+</svg>

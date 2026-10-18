@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="100%" role="img" aria-label="P2가 B를 포기하고 이미 수락된 값 A를 이어받는 흐름" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#4b5563"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#d9822b"/></marker>
+    <style>
+      .h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="760" height="540" fill="#ffffff"/>
+
+  <text x="20" y="26" font-size="15" font-weight="700" fill="#1f2328">시작 상태: S1~S3이 (1, A)를 수락했다 (A는 이미 정해졌다)</text>
+
+  <!-- 생명선 -->
+  <g stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 5">
+    <line x1="80" y1="124" x2="80" y2="455"/>
+    <line x1="205" y1="124" x2="205" y2="455"/>
+    <line x1="330" y1="124" x2="330" y2="455"/>
+    <line x1="455" y1="124" x2="455" y2="455"/>
+    <line x1="580" y1="124" x2="580" y2="455"/>
+    <line x1="700" y1="124" x2="700" y2="455"/>
+  </g>
+
+  <!-- 수락자 박스 -->
+  <g text-anchor="middle" stroke-width="2">
+    <rect x="25" y="44" width="110" height="74" rx="10" fill="#e8f0fc" stroke="#2f6fdb"/>
+    <text x="80" y="70" font-size="16" font-weight="700" fill="#1f2328">S1</text>
+    <text x="80" y="98" font-size="14" font-weight="700" fill="#2f6fdb">수락: (1, A)</text>
+
+    <rect x="150" y="44" width="110" height="74" rx="10" fill="#e8f0fc" stroke="#2f6fdb"/>
+    <text x="205" y="70" font-size="16" font-weight="700" fill="#1f2328">S2</text>
+    <text x="205" y="98" font-size="14" font-weight="700" fill="#2f6fdb">수락: (1, A)</text>
+
+    <rect x="275" y="44" width="110" height="74" rx="10" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3.5"/>
+    <text x="330" y="70" font-size="16" font-weight="700" fill="#1f2328">S3</text>
+    <text x="330" y="98" font-size="14" font-weight="700" fill="#2f6fdb">수락: (1, A)</text>
+
+    <rect x="400" y="44" width="110" height="74" rx="10" fill="#f6f7f8" stroke="#9ca3af"/>
+    <text x="455" y="70" font-size="16" font-weight="700" fill="#1f2328">S4</text>
+    <text x="455" y="98" font-size="14" fill="#6b7280">수락: 없음</text>
+
+    <rect x="525" y="44" width="110" height="74" rx="10" fill="#f6f7f8" stroke="#9ca3af"/>
+    <text x="580" y="70" font-size="16" font-weight="700" fill="#1f2328">S5</text>
+    <text x="580" y="98" font-size="14" fill="#6b7280">수락: 없음</text>
+
+    <rect x="650" y="44" width="100" height="74" rx="10" fill="#fdf1e3" stroke="#d9822b"/>
+    <text x="700" y="70" font-size="16" font-weight="700" fill="#1f2328">P2</text>
+    <text x="700" y="98" font-size="14" font-weight="700" fill="#d9822b">제안할 값: B</text>
+  </g>
+
+  <!-- 1) Prepare(2) -->
+  <line x1="700" y1="165" x2="330" y2="165" stroke="#d9822b" stroke-width="2.5" marker-end="url(#ao)"/>
+  <g fill="#d9822b"><circle cx="580" cy="165" r="4"/><circle cx="455" cy="165" r="4"/></g>
+  <text class="h" x="515" y="154" font-size="14" font-weight="700" fill="#d9822b" text-anchor="middle">Prepare(2) → S3, S4, S5</text>
+
+  <!-- 2) Promise from S3 (강조) -->
+  <line x1="330" y1="220" x2="700" y2="220" stroke="#2f6fdb" stroke-width="3.5" stroke-dasharray="8 4" marker-end="url(#ab)"/>
+  <circle cx="330" cy="220" r="5" fill="#2f6fdb"/>
+  <text class="h" x="515" y="209" font-size="15" font-weight="700" fill="#2f6fdb" text-anchor="middle">Promise: "(1, A) 수락함"</text>
+  <text class="h" x="318" y="238" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="end">S3이 A를 기억한다</text>
+
+  <!-- 2) Promise from S4, S5 -->
+  <line x1="455" y1="268" x2="700" y2="268" stroke="#4b5563" stroke-width="2" stroke-dasharray="7 4" marker-end="url(#ag)"/>
+  <g fill="#4b5563"><circle cx="455" cy="268" r="4"/><circle cx="580" cy="268" r="4"/></g>
+  <text class="h" x="578" y="257" font-size="13" fill="#4b5563" text-anchor="middle">Promise: 수락한 값 없음</text>
+
+  <!-- 3) P2의 판단 -->
+  <rect x="345" y="302" width="400" height="86" rx="10" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="365" y="328" font-size="14" fill="#1f2328">약속에 (1, A)가 들어 있다. 그렇다면</text>
+  <text x="365" y="362" font-size="16" font-weight="700" fill="#1f2328">제안할 값:</text>
+  <text x="470" y="362" font-size="18" font-weight="700" fill="#d9822b">B</text>
+  <line x1="464" y1="356" x2="490" y2="356" stroke="#c0392b" stroke-width="3"/>
+  <text x="508" y="362" font-size="16" font-weight="700" fill="#1f2328">→</text>
+  <text x="538" y="362" font-size="18" font-weight="700" fill="#2f6fdb">A</text>
+
+  <!-- 4) Accept(2, A) -->
+  <line x1="700" y1="425" x2="330" y2="425" stroke="#2f6fdb" stroke-width="3" marker-end="url(#ab)"/>
+  <g fill="#2f6fdb"><circle cx="580" cy="425" r="4"/><circle cx="455" cy="425" r="4"/></g>
+  <text class="h" x="515" y="414" font-size="15" font-weight="700" fill="#2f6fdb" text-anchor="middle">Accept(2, A)</text>
+
+  <!-- 결론 -->
+  <rect x="130" y="472" width="500" height="46" rx="10" fill="#2f6fdb"/>
+  <text x="380" y="502" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">B를 포기하고 A를 이어받는다</text>
+</svg>
