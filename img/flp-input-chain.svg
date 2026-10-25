@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 440" width="100%" role="img" aria-label="서버 5대의 입력을 하나씩 A에서 B로 바꾸는 사슬에서, A로 정해진 조합과 B로 정해진 조합이 이웃하는 곳의 서버 p를 멈춘 것으로 보면 두 조합이 구분되지 않아 모순이 생긴다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#c0392b"/></marker>
+    <style>
+      .h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="760" height="440" fill="#ffffff"/>
+
+  <!-- 사슬 방향 -->
+  <line x1="40" y1="30" x2="720" y2="30" stroke="#9ca3af" stroke-width="2" marker-end="url(#ag)"/>
+  <text class="h" x="380" y="35" font-size="14" font-weight="700" fill="#4b5563" text-anchor="middle">입력을 한 서버씩 A에서 B로 바꾼다</text>
+
+  <!-- 이웃한 두 조합 강조 -->
+  <rect x="258" y="60" width="244" height="112" rx="12" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="380" y="53" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">입력이 서버 하나만 다른 이웃</text>
+
+  <!-- 조합 6개 -->
+  <g stroke-width="2">
+    <rect x="30" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#2f6fdb"/>
+    <rect x="150" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-dasharray="5 4"/>
+    <rect x="270" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#2f6fdb"/>
+    <rect x="390" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#d9822b"/>
+    <rect x="510" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-dasharray="5 4"/>
+    <rect x="630" y="92" width="100" height="44" rx="8" fill="#ffffff" stroke="#d9822b"/>
+  </g>
+  <g font-size="14" font-weight="700" text-anchor="middle" fill="#1f2328" stroke-width="1.5">
+    <!-- 1: AAAAA -->
+    <rect x="35" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="44" y="119">A</text>
+    <rect x="53" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="62" y="119">A</text>
+    <rect x="71" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="80" y="119">A</text>
+    <rect x="89" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="98" y="119">A</text>
+    <rect x="107" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="116" y="119">A</text>
+    <!-- 2: BAAAA -->
+    <rect x="155" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="164" y="119">B</text>
+    <rect x="173" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="182" y="119">A</text>
+    <rect x="191" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="200" y="119">A</text>
+    <rect x="209" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="218" y="119">A</text>
+    <rect x="227" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="236" y="119">A</text>
+    <!-- 3: BBAAA -->
+    <rect x="275" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="284" y="119">B</text>
+    <rect x="293" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="302" y="119">B</text>
+    <rect x="311" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="320" y="119">A</text>
+    <rect x="329" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="338" y="119">A</text>
+    <rect x="347" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="356" y="119">A</text>
+    <!-- 4: BBBAA -->
+    <rect x="395" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="404" y="119">B</text>
+    <rect x="413" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="422" y="119">B</text>
+    <rect x="431" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="440" y="119">B</text>
+    <rect x="449" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="458" y="119">A</text>
+    <rect x="467" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="476" y="119">A</text>
+    <!-- 5: BBBBA -->
+    <rect x="515" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="524" y="119">B</text>
+    <rect x="533" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="542" y="119">B</text>
+    <rect x="551" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="560" y="119">B</text>
+    <rect x="569" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="578" y="119">B</text>
+    <rect x="587" y="104" width="18" height="20" fill="#e8f0fc" stroke="#2f6fdb"/><text x="596" y="119">A</text>
+    <!-- 6: BBBBB -->
+    <rect x="635" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="644" y="119">B</text>
+    <rect x="653" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="662" y="119">B</text>
+    <rect x="671" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="680" y="119">B</text>
+    <rect x="689" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="698" y="119">B</text>
+    <rect x="707" y="104" width="18" height="20" fill="#fdf1e3" stroke="#d9822b"/><text x="716" y="119">B</text>
+  </g>
+
+  <!-- 정해짐 라벨 -->
+  <g font-size="13" font-weight="700" text-anchor="middle">
+    <text x="80" y="84" fill="#2f6fdb">A로 정해짐</text>
+    <text x="320" y="84" fill="#2f6fdb">A로 정해짐</text>
+    <text x="440" y="84" fill="#d9822b">B로 정해짐</text>
+    <text x="680" y="84" fill="#d9822b">B로 정해짐</text>
+  </g>
+
+  <!-- 다른 서버 p 표시 (3번째 칸) -->
+  <rect x="311" y="104" width="18" height="20" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <rect x="431" y="104" width="18" height="20" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <line x1="320" y1="140" x2="320" y2="150" stroke="#c0392b" stroke-width="2"/>
+  <line x1="440" y1="140" x2="440" y2="150" stroke="#c0392b" stroke-width="2"/>
+  <text x="320" y="166" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">p</text>
+  <text x="440" y="166" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">p</text>
+
+  <!-- 논증 -->
+  <line x1="380" y1="176" x2="380" y2="212" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="110" y="216" width="540" height="84" rx="10" fill="#f6f7f8" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="380" y="248" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">p가 처음부터 멈췄다면, 나머지 4대에게 두 조합은 구분되지 않는다</text>
+  <text x="380" y="278" font-size="15" fill="#1f2328" text-anchor="middle">나머지는 두 조합에서 똑같이 움직이므로 같은 값을 결정한다</text>
+  <line x1="380" y1="304" x2="380" y2="332" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <rect x="110" y="336" width="540" height="52" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="380" y="368" font-size="16" font-weight="700" fill="#c0392b" text-anchor="middle">한쪽은 A로만, 다른 쪽은 B로만 정해진다고 했으니 모순</text>
+  <text x="380" y="422" font-size="15" fill="#4b5563" text-anchor="middle">그래서 둘 중 적어도 하나는 처음부터 갈림길이다</text>
+</svg>

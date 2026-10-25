@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="100%" role="img" aria-label="갈림길 상태에서 메시지 배달 순서에 따라 A로 정해진 상태, B로 정해진 상태, 또 다른 갈림길 상태로 갈라지는 트리" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <linearGradient id="bi" x1="0" y1="0" x2="1" y2="0"><stop offset="0.5" stop-color="#e8f0fc"/><stop offset="0.5" stop-color="#fdf1e3"/></linearGradient>
+    <style>
+      .h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <rect width="760" height="450" fill="#ffffff"/>
+
+  <!-- 간선 -->
+  <g stroke="#6b7280" stroke-width="2.5" fill="none">
+    <line x1="330" y1="80" x2="150" y2="156" marker-end="url(#ag)"/>
+    <line x1="380" y1="80" x2="380" y2="156" marker-end="url(#ag)"/>
+    <line x1="430" y1="80" x2="610" y2="156" marker-end="url(#ag)"/>
+    <line x1="350" y1="210" x2="285" y2="301" marker-end="url(#ag)"/>
+    <line x1="410" y1="210" x2="475" y2="301" marker-end="url(#ag)"/>
+  </g>
+  <g font-size="14" font-weight="700" fill="#4b5563" text-anchor="middle">
+    <text class="h" x="225" y="112">m1 배달</text>
+    <text class="h" x="352" y="124">m2 배달</text>
+    <text class="h" x="540" y="112">m3 배달</text>
+    <text class="h" x="296" y="262">m4 배달</text>
+    <text class="h" x="466" y="262">m5 배달</text>
+  </g>
+  <text x="396" y="127" font-size="13" fill="#6b7280">갈림길에서 갈림길로</text>
+
+  <!-- 노드 -->
+  <g font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">
+    <rect x="295" y="30" width="170" height="50" rx="10" fill="url(#bi)" stroke="#6b7280" stroke-width="2"/>
+    <text x="380" y="60">갈림길 상태</text>
+    <rect x="295" y="160" width="170" height="50" rx="10" fill="url(#bi)" stroke="#6b7280" stroke-width="2"/>
+    <text x="380" y="190">갈림길 상태</text>
+    <rect x="40" y="160" width="170" height="50" rx="10" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2"/>
+    <text x="125" y="190">A로 정해진 상태</text>
+    <rect x="550" y="160" width="170" height="50" rx="10" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+    <text x="635" y="190">B로 정해진 상태</text>
+    <rect x="175" y="305" width="170" height="50" rx="10" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2"/>
+    <text x="260" y="335">A로 정해진 상태</text>
+    <rect x="415" y="305" width="170" height="50" rx="10" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+    <text x="500" y="335">B로 정해진 상태</text>
+  </g>
+
+  <!-- 캡션 -->
+  <text x="380" y="410" font-size="15" fill="#4b5563" text-anchor="middle">노드는 상태, 간선은 메시지 하나의 배달. 배달 순서에 따라 결과가 갈린다</text>
+</svg>
