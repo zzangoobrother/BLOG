@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 650" width="100%" role="img" aria-label="로그 일치 검사. prevLogIndex 3, prevLogTerm 2가 팔로워의 3번 칸과 일치하면 d@3을 이어 붙이고, 4번 칸에 임기가 다른 엔트리가 있으면 4번부터 잘라내고 d@3으로 덮어쓴다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <style>.h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }</style>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#d9822b"/></marker>
+  </defs>
+  <rect width="760" height="650" fill="#ffffff"/>
+  <text x="30" y="32" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">1. 일치: 이어 붙인다</text>
+  <text x="138.0" y="56" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="200.0" y="56" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="262.0" y="56" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <text x="324.0" y="56" font-size="13" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="386.0" y="56" font-size="13" fill="#6b7280" text-anchor="middle">5</text>
+  <text x="30" y="91" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">리더</text>
+  <text x="30" y="181" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">팔로워</text>
+  <text x="30" y="271" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">결과</text>
+  <g><rect x="110" y="66" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="91.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="66" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="91.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="66" width="56" height="40" rx="6" fill="#ffffff" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="262.0" y="91.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="66" width="56" height="40" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2.5"/>
+  <text x="324.0" y="91.0" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">d@3</text>
+  </g>
+  <g><rect x="110" y="156" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="181.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="156" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="181.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="156" width="56" height="40" rx="6" fill="#ffffff" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="262.0" y="181.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="156" width="56" height="40" rx="6" fill="#ffffff" stroke="#2f6fdb" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="324.0" y="181.0" font-size="14" fill="#1f2328" text-anchor="middle"></text>
+  </g>
+  <g><rect x="110" y="246" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="271.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="246" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="271.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="246" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="262.0" y="271.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="246" width="56" height="40" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2.5"/>
+  <text x="324.0" y="271.0" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">d@3</text>
+  </g>
+  <line x1="324.0" y1="108" x2="324.0" y2="154" stroke="#2f6fdb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="340.0" y="129" font-size="14" font-weight="700" fill="#1f2328" text-anchor="start">엔트리 추가 요청</text>
+  <text x="340.0" y="147" font-size="13" fill="#4b5563" text-anchor="start">prevLogIndex=3, prevLogTerm=2, 엔트리 d@3</text>
+  <line x1="324.0" y1="198" x2="324.0" y2="244" stroke="#2f6fdb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="340.0" y="227" font-size="14" font-weight="700" fill="#1f2328" text-anchor="start">d@3을 이어 붙인다</text>
+  <text x="430" y="174" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="start">3번 칸의 임기 2 = prevLogTerm</text>
+  <text x="430" y="194" font-size="13" fill="#4b5563" text-anchor="start">일치하므로 d@3을 이어 붙인다</text>
+  <line x1="30" y1="305" x2="730" y2="305" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="30" y="342" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">2. 충돌: 잘라내고 덮어쓴다</text>
+  <text x="138.0" y="366" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="200.0" y="366" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="262.0" y="366" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <text x="324.0" y="366" font-size="13" fill="#6b7280" text-anchor="middle">4</text>
+  <text x="386.0" y="366" font-size="13" fill="#6b7280" text-anchor="middle">5</text>
+  <text x="30" y="401" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">리더</text>
+  <text x="30" y="491" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">팔로워</text>
+  <text x="30" y="581" font-size="14" font-weight="700" fill="#4b5563" text-anchor="start">결과</text>
+  <g><rect x="110" y="376" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="401.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="376" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="401.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="376" width="56" height="40" rx="6" fill="#ffffff" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="262.0" y="401.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="376" width="56" height="40" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2.5"/>
+  <text x="324.0" y="401.0" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">d@3</text>
+  </g>
+  <g><rect x="110" y="466" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="491.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="466" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="491.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="466" width="56" height="40" rx="6" fill="#ffffff" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="262.0" y="491.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="466" width="56" height="40" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="324.0" y="491.0" font-size="14" fill="#c0392b" text-anchor="middle">e@2</text>
+  <line x1="302" y1="486.0" x2="346" y2="486.0" stroke="#c0392b" stroke-width="2.5"/>
+  </g>
+  <g><rect x="358" y="466" width="56" height="40" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="386.0" y="491.0" font-size="14" fill="#c0392b" text-anchor="middle">f@2</text>
+  <line x1="364" y1="486.0" x2="408" y2="486.0" stroke="#c0392b" stroke-width="2.5"/>
+  </g>
+  <g><rect x="110" y="556" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="138.0" y="581.0" font-size="14" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="172" y="556" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="200.0" y="581.0" font-size="14" fill="#1f2328" text-anchor="middle">b@1</text>
+  </g>
+  <g><rect x="234" y="556" width="56" height="40" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="262.0" y="581.0" font-size="14" fill="#1f2328" text-anchor="middle">c@2</text>
+  </g>
+  <g><rect x="296" y="556" width="56" height="40" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2.5"/>
+  <text x="324.0" y="581.0" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">d@3</text>
+  </g>
+  <line x1="324.0" y1="418" x2="324.0" y2="464" stroke="#2f6fdb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="340.0" y="439" font-size="14" font-weight="700" fill="#1f2328" text-anchor="start">엔트리 추가 요청</text>
+  <text x="340.0" y="457" font-size="13" fill="#4b5563" text-anchor="start">prevLogIndex=3, prevLogTerm=2, 엔트리 d@3</text>
+  <line x1="324.0" y1="508" x2="324.0" y2="554" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="340.0" y="537" font-size="14" font-weight="700" fill="#1f2328" text-anchor="start">4번부터 잘라내고 d@3으로 덮어쓴다</text>
+  <text x="430" y="484" font-size="13" font-weight="700" fill="#c0392b" text-anchor="start">3번 일치, 4번은 임기가 달라 충돌</text>
+  <text x="430" y="504" font-size="13" fill="#c0392b" text-anchor="start">4번, 5번은 옛 리더가 쓰다 만 엔트리</text>
+  <text x="30" y="640" font-size="13" fill="#6b7280" text-anchor="start">명령은 a, b, c … 로 붙였다. 번호와 임기가 같으면 같은 명령이다.</text>
+</svg>

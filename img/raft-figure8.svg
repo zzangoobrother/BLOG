@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 690" width="100%" role="img" aria-label="논문 그림 8 시나리오 (a)에서 (d). (c)에서 x@2는 과반에 있지만 임기 2 엔트리라 커밋하면 안 되고, (d)에서 N5가 리더가 되면 N2와 N3의 x@2 자리가 y@3으로 덮어써진다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <style>.h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }</style>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#d9822b"/></marker>
+  </defs>
+  <rect width="760" height="690" fill="#ffffff"/>
+  <text x="23" y="32" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">(a) N1 리더, 임기 2</text>
+  <text x="100" y="54" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="156" y="54" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="212" y="54" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <g opacity="1"><rect x="23" y="62" width="40" height="30" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="43" y="82" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N1</text>
+  </g>
+  <g><rect x="75" y="62" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="82.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="131" y="62" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="156.0" y="82.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <text x="247" y="82" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="start">리더</text>
+  <g opacity="1"><rect x="23" y="98" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="118" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N2</text>
+  </g>
+  <g><rect x="75" y="98" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="118.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="131" y="98" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="156.0" y="118.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <g opacity="1"><rect x="23" y="134" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="154" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N3</text>
+  </g>
+  <g><rect x="75" y="134" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="154.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="1"><rect x="23" y="170" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="190" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N4</text>
+  </g>
+  <g><rect x="75" y="170" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="190.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="1"><rect x="23" y="206" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="226" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N5</text>
+  </g>
+  <g><rect x="75" y="206" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="226.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <rect x="15" y="250" width="350" height="52" rx="8" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="189.5" y="272" font-size="14" font-weight="700" fill="#d9822b" text-anchor="middle">x@2는 N1과 N2에만 있다</text>
+  <text x="393" y="32" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">(b) N1 죽음, N5 리더, 임기 3</text>
+  <text x="470" y="54" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="526" y="54" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="582" y="54" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <g opacity="0.45"><rect x="393" y="62" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="82" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N1</text>
+  </g>
+  <g opacity="0.45"><rect x="445" y="62" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="82.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="0.45"><rect x="501" y="62" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="526.0" y="82.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <text x="617" y="82" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">죽음</text>
+  <g opacity="1"><rect x="393" y="98" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="118" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N2</text>
+  </g>
+  <g><rect x="445" y="98" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="118.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="98" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="526.0" y="118.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <g opacity="1"><rect x="393" y="134" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="154" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N3</text>
+  </g>
+  <g><rect x="445" y="134" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="154.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="1"><rect x="393" y="170" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="190" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N4</text>
+  </g>
+  <g><rect x="445" y="170" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="190.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="1"><rect x="393" y="206" width="40" height="30" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="413" y="226" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N5</text>
+  </g>
+  <g><rect x="445" y="206" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="226.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="206" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="526.0" y="226.0" font-size="13" fill="#1f2328" text-anchor="middle">y@3</text>
+  </g>
+  <text x="617" y="226" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="start">리더</text>
+  <rect x="385" y="250" width="350" height="52" rx="8" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="559.5" y="272" font-size="14" font-weight="700" fill="#d9822b" text-anchor="middle">N5가 y@3을 자기 로그에 쓴다</text>
+  <text x="23" y="342" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">(c) N5 죽음, N1 리더, 임기 4</text>
+  <text x="100" y="364" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="156" y="364" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="212" y="364" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <g opacity="1"><rect x="23" y="372" width="40" height="30" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="43" y="392" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N1</text>
+  </g>
+  <g><rect x="75" y="372" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="392.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="131" y="372" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="156.0" y="392.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <text x="247" y="392" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="start">리더</text>
+  <g opacity="1"><rect x="23" y="408" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="428" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N2</text>
+  </g>
+  <g><rect x="75" y="408" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="428.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="131" y="408" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="156.0" y="428.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <g opacity="1"><rect x="23" y="444" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="464" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N3</text>
+  </g>
+  <g><rect x="75" y="444" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="464.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="131" y="444" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="156.0" y="464.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <g opacity="1"><rect x="23" y="480" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="500" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N4</text>
+  </g>
+  <g><rect x="75" y="480" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="500.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="0.45"><rect x="23" y="516" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="43" y="536" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N5</text>
+  </g>
+  <g opacity="0.45"><rect x="75" y="516" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="100.0" y="536.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="0.45"><rect x="131" y="516" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="156.0" y="536.0" font-size="13" fill="#1f2328" text-anchor="middle">y@3</text>
+  </g>
+  <text x="247" y="536" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">죽음</text>
+  <rect x="15" y="560" width="350" height="52" rx="8" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="189.5" y="582" font-size="14" font-weight="700" fill="#d9822b" text-anchor="middle">x@2는 과반에 있지만</text>
+  <text x="189.5" y="602" font-size="14" font-weight="700" fill="#d9822b" text-anchor="middle">임기 2 엔트리라 커밋하면 안 된다</text>
+  <text x="393" y="342" font-size="16" font-weight="700" fill="#1f2328" text-anchor="start">(d) N1 죽음, N5 리더, 임기 5</text>
+  <text x="470" y="364" font-size="13" fill="#6b7280" text-anchor="middle">1</text>
+  <text x="526" y="364" font-size="13" fill="#6b7280" text-anchor="middle">2</text>
+  <text x="582" y="364" font-size="13" fill="#6b7280" text-anchor="middle">3</text>
+  <g opacity="0.45"><rect x="393" y="372" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="392" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N1</text>
+  </g>
+  <g opacity="0.45"><rect x="445" y="372" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="392.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g opacity="0.45"><rect x="501" y="372" width="50" height="30" rx="6" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="526.0" y="392.0" font-size="13" font-weight="700" fill="#d9822b" text-anchor="middle">x@2</text>
+  </g>
+  <text x="617" y="392" font-size="13" font-weight="700" fill="#6b7280" text-anchor="start">죽음</text>
+  <g opacity="1"><rect x="393" y="408" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="428" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N2</text>
+  </g>
+  <g><rect x="445" y="408" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="428.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="408" width="50" height="30" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="526.0" y="428.0" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">y@3</text>
+  </g>
+  <g><rect x="557" y="408" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="582.0" y="428.0" font-size="13" fill="#1f2328" text-anchor="middle">z@5</text>
+  </g>
+  <g opacity="1"><rect x="393" y="444" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="464" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N3</text>
+  </g>
+  <g><rect x="445" y="444" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="464.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="444" width="50" height="30" rx="6" fill="#fdecea" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="526.0" y="464.0" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">y@3</text>
+  </g>
+  <g><rect x="557" y="444" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="582.0" y="464.0" font-size="13" fill="#1f2328" text-anchor="middle">z@5</text>
+  </g>
+  <g opacity="1"><rect x="393" y="480" width="40" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="413" y="500" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N4</text>
+  </g>
+  <g><rect x="445" y="480" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="500.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="480" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="526.0" y="500.0" font-size="13" fill="#1f2328" text-anchor="middle">y@3</text>
+  </g>
+  <g><rect x="557" y="480" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="582.0" y="500.0" font-size="13" fill="#1f2328" text-anchor="middle">z@5</text>
+  </g>
+  <g opacity="1"><rect x="393" y="516" width="40" height="30" rx="6" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3"/>
+  <text x="413" y="536" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">N5</text>
+  </g>
+  <g><rect x="445" y="516" width="50" height="30" rx="6" fill="#f6f7f8" stroke="#9ca3af" stroke-width="2"/>
+  <text x="470.0" y="536.0" font-size="13" fill="#1f2328" text-anchor="middle">a@1</text>
+  </g>
+  <g><rect x="501" y="516" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="526.0" y="536.0" font-size="13" fill="#1f2328" text-anchor="middle">y@3</text>
+  </g>
+  <g><rect x="557" y="516" width="50" height="30" rx="6" fill="#ffffff" stroke="#9ca3af" stroke-width="2"/>
+  <text x="582.0" y="536.0" font-size="13" fill="#1f2328" text-anchor="middle">z@5</text>
+  </g>
+  <text x="617" y="536" font-size="13" font-weight="700" fill="#2f6fdb" text-anchor="start">리더</text>
+  <rect x="385" y="560" width="350" height="52" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="559.5" y="582" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">(c)에서 x를 커밋했다면</text>
+  <text x="559.5" y="602" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">커밋된 명령이 사라진다</text>
+  <rect x="20" y="655" width="14" height="14" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>  <text x="40" y="667" font-size="13" fill="#4b5563" text-anchor="start">x@2</text>
+  <rect x="90" y="655" width="14" height="14" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>  <text x="110" y="667" font-size="13" fill="#4b5563" text-anchor="start">x@2를 덮어쓴 자리</text>
+  <rect x="240" y="655" width="14" height="14" rx="3" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="3"/>  <text x="260" y="667" font-size="13" fill="#4b5563" text-anchor="start">리더</text>
+  <text x="310" y="667" font-size="13" fill="#4b5563" text-anchor="start">표기는 명령@임기, 회색 흐림은 죽은 서버</text>
+</svg>

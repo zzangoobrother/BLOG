@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="100%" role="img" aria-label="임기 타임라인. 임기 1은 선거 뒤 리더 활동, 임기 2는 표가 갈려 리더 없이 끝남, 임기 3은 선거 뒤 리더 활동" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <style>.h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }</style>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#d9822b"/></marker>
+  </defs>
+  <rect width="760" height="300" fill="#ffffff"/>
+  <line x1="40" y1="52" x2="40" y2="196" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="300" y1="52" x2="300" y2="196" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="440" y1="52" x2="440" y2="196" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="720" y1="52" x2="720" y2="196" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="170" y="40" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">임기 1</text>
+  <text x="370" y="40" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">임기 2</text>
+  <text x="580" y="40" font-size="16" font-weight="700" fill="#1f2328" text-anchor="middle">임기 3</text>
+  <rect x="40" y="100" width="60" height="70" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="70.0" y="140.0" font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">선거</text>
+  <rect x="100" y="100" width="200" height="70" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2"/>
+  <text x="200.0" y="140.0" font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">리더 활동</text>
+  <rect x="300" y="100" width="140" height="70" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="370.0" y="140.0" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">선거</text>
+  <rect x="440" y="100" width="60" height="70" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>
+  <text x="470.0" y="140.0" font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">선거</text>
+  <rect x="500" y="100" width="220" height="70" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2"/>
+  <text x="610.0" y="140.0" font-size="15" font-weight="700" fill="#1f2328" text-anchor="middle">리더 활동</text>
+  <text x="370" y="131" font-size="1" fill="#1f2328" text-anchor="middle"></text>
+  <text x="370" y="218" font-size="14" font-weight="700" fill="#c0392b" text-anchor="middle">표가 갈려 리더 없이 끝남</text>
+  <text x="170" y="218" font-size="14" fill="#6b7280" text-anchor="middle">리더가 서서 임기 끝까지 활동</text>
+  <text x="610" y="218" font-size="14" fill="#6b7280" text-anchor="middle">새 선거에서 리더가 섬</text>
+  <line x1="40" y1="245" x2="722" y2="245" stroke="#6b7280" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="700" y="267" font-size="14" fill="#6b7280" text-anchor="end">시간</text>
+  <rect x="40" y="260" width="14" height="14" fill="#fdf1e3" stroke="#d9822b" stroke-width="2"/>  <text x="60" y="272" font-size="13" fill="#4b5563" text-anchor="start">선거</text>
+  <rect x="105" y="260" width="14" height="14" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2"/>  <text x="125" y="272" font-size="13" fill="#4b5563" text-anchor="start">리더 활동</text>
+  <rect x="210" y="260" width="14" height="14" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>  <text x="230" y="272" font-size="13" fill="#4b5563" text-anchor="start">리더 없이 끝난 선거</text>
+</svg>

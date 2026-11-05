@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="100%" role="img" aria-label="팔로워, 후보, 리더의 상태 전이. 팔로워는 선거 타임아웃이면 후보가 되고, 후보는 과반 득표로 리더가 되며, 후보와 리더는 리더를 발견하거나 더 높은 임기를 만나면 팔로워로 돌아간다" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', sans-serif">
+  <defs>
+    <style>.h { paint-order: stroke; stroke: #ffffff; stroke-width: 9; stroke-linejoin: round; }</style>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#6b7280"/></marker>
+    <marker id="ab" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#2f6fdb"/></marker>
+    <marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="ao" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 z" fill="#d9822b"/></marker>
+  </defs>
+  <rect width="760" height="430" fill="#ffffff"/>
+  <rect x="55" y="170" width="140" height="64" rx="12" fill="#f6f7f8" stroke="#6b7280" stroke-width="2.5"/>
+  <text x="125" y="209" font-size="18" font-weight="700" fill="#1f2328" text-anchor="middle">팔로워</text>
+  <rect x="310" y="170" width="140" height="64" rx="12" fill="#fdf1e3" stroke="#d9822b" stroke-width="2.5"/>
+  <text x="380" y="209" font-size="18" font-weight="700" fill="#1f2328" text-anchor="middle">후보</text>
+  <rect x="565" y="170" width="140" height="64" rx="12" fill="#e8f0fc" stroke="#2f6fdb" stroke-width="2.5"/>
+  <text x="635" y="209" font-size="18" font-weight="700" fill="#1f2328" text-anchor="middle">리더</text>
+  <circle cx="125" cy="95" r="7" fill="#1f2328"/>
+  <line x1="125" y1="102" x2="125" y2="168" stroke="#6b7280" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="140" y="128" font-size="14" fill="#6b7280" text-anchor="start">시작</text>
+  <line x1="197" y1="202" x2="308" y2="202" stroke="#6b7280" stroke-width="2.5" marker-end="url(#ag)" transform="translate(-0,0)"/>
+  <text class="h" x="252" y="192" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">선거 타임아웃</text>
+  <line x1="451" y1="202" x2="563" y2="202" stroke="#2f6fdb" stroke-width="2.5" marker-end="url(#ab)" transform="translate(-0,0)"/>
+  <text class="h" x="507" y="192" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">과반 득표</text>
+  <path d="M350,170 C325,105 435,105 410,168" fill="none" stroke="#d9822b" stroke-width="2.5" marker-end="url(#ao)"/>
+  <text class="h" x="380" y="92" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">선거 타임아웃, 새 선거</text>
+  <path d="M350,236 C350,310 160,310 160,238" fill="none" stroke="#6b7280" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text class="h" x="255" y="311" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">리더를 발견하거나</text>
+  <text class="h" x="255" y="330" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">더 높은 임기를 만남</text>
+  <path d="M660,236 C660,400 90,400 90,238" fill="none" stroke="#6b7280" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text class="h" x="375" y="385" font-size="14" font-weight="700" fill="#1f2328" text-anchor="middle">더 높은 임기를 만남</text>
+</svg>
